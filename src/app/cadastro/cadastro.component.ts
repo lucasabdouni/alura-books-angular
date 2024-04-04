@@ -1,19 +1,23 @@
-import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: "app-cadastro",
+  templateUrl: "./cadastro.component.html",
+  styleUrls: ["./cadastro.component.css"],
 })
 export class CadastroComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  cadastrar(){
-      console.log('Formulário enviado');
+  cadastrar(form: NgForm) {
+    if (form.valid) {
+      this.router.navigate(["/sucesso"]);
+    } else {
+      alert("formulario invalido");
+    }
+    console.log(form.controls);
   }
 }

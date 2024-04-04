@@ -8,6 +8,7 @@ import { CadastroComponent } from "./cadastro/cadastro.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { SucessoCadastroComponent } from "./sucesso-cadastro/sucesso-cadastro.component";
+import { MensagemComponent } from './components/mensagem/mensagem.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SucessoCadastroComponent } from "./sucesso-cadastro/sucesso-cadastro.co
     FooterComponent,
     CadastroComponent,
     SucessoCadastroComponent,
+    MensagemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
